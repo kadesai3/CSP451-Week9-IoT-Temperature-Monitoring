@@ -1,0 +1,5 @@
+# Simulate normal temperature
+az iot device send-d2c-message --hub-name kadesai3-iothub-2046979 --device-id kadesai3-temp-sensor-01 --data '{"temperature":30,"humidity":55}'
+
+# Simulate high temperature (triggers alert)
+az iot device send-d2c-message --hub-name kadesai3-iothub-2046979 --device-id kadesai3-temp-sensor-01 --data '{"temperature":45,"humidity":60}'
